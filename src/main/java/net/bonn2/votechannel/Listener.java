@@ -17,7 +17,7 @@ public class Listener extends ListenerAdapter {
 
     @Override
     public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
-        if (Settings.get(module, event.getGuild().getId(), "channels").getAsTextChannelList(event.getGuild()).contains(event.getChannel().asTextChannel())) {
+        if (Settings.get(module, event.getGuild().getId(), "channels").getAsMessageChannelList(event.getGuild()).contains(event.getChannel())) {
             event.getMessage().addReaction(Emoji.fromUnicode("\uD83D\uDC4D")).queue();
             event.getMessage().addReaction(Emoji.fromUnicode("\uD83D\uDC4E")).queue();
         }

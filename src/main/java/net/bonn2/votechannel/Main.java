@@ -17,7 +17,7 @@ public class Main extends Module {
 
     @Override
     public void registerSettings() {
-        Settings.register(this, "channels", Setting.Type.TEXT_CHANNEL_LIST, Setting.Type.TEXT_CHANNEL_LIST.unset,
+        Settings.register(this, "channels", Setting.Type.MESSAGE_CHANNEL_LIST, Setting.Type.MESSAGE_CHANNEL_LIST.unset,
                 "The channels to add voting reactions to.");
     }
 
